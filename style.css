@@ -1671,3 +1671,14 @@ footer {
 
 }
 
+/* Center project buttons on mobile */
+@media (max-width: 768px) {
+
+    .project-card .btn {
+        display: flex;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+}
+
