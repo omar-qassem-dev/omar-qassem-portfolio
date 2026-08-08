@@ -1354,3 +1354,8 @@ flex-shrink: 0;
 .contact-item a {
 display: inline-block;
 }
+
+.project-card .btn {
+    display: inline-flex;
+    margin-top: 20px;
+}
