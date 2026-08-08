@@ -339,6 +339,9 @@ body.light header {
     color: #ffffff;
 }
 
+.github-btn {
+    min-width: 150px;
+}
 
 /* ==================================================
    HERO IMAGE
