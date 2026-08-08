@@ -304,7 +304,7 @@ body.light header {
 
     padding: 14px 34px;
 
-    min-height: 50px;
+    min-width: 180px;
 
     border-radius: 40px;
 
@@ -673,44 +673,36 @@ section {
 ================================================== */
 
 .project-grid {
-    display: grid;
-
-    /* Desktop = 3 projects */
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-
-    gap: 30px;
-
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1100px;
 
     margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
 }
 
 .project-card {
+    width: 100%;
+
     background: var(--card);
 
     padding: 35px 30px;
 
-    border-radius: 20px;
-
-    min-height: 360px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
+    border-radius: 18px;
 
     text-align: center;
 
+    transition: .4s;
+
+    cursor: default;
+
     border: 1px solid transparent;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
-
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease,
-        border-color .4s ease,
-        background .4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
 }
 
 .project-card:hover {
@@ -719,24 +711,28 @@ section {
     border-color: var(--secondary);
 
     box-shadow: var(--shadow);
+
+    background: var(--card);
 }
 
 .project-icon {
+    display: block;
+
     font-size: 55px;
 
     color: var(--secondary);
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     transition: .4s;
 }
 
 .project-card:hover .project-icon {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .project-card h3 {
-    font-size: 23px;
+    font-size: 24px;
 
     margin-bottom: 15px;
 
@@ -744,32 +740,138 @@ section {
 }
 
 .project-card p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
     color: var(--text-secondary);
 
     line-height: 1.8;
 
-    max-width: 330px;
-
-    flex: 1;
+    font-size: 16px;
 }
-
-
-/* PROJECT BUTTON */
 
 .project-card .btn {
-    width: 180px;
-
-    min-height: 48px;
-
     margin-top: 25px;
 
-    display: inline-flex;
+    min-width: 200px;
 }
 
-.project-card .btn:hover {
-    transform: translateY(-4px);
+
+/* ==================================================
+   PROJECTS - TABLET
+================================================== */
+
+@media (max-width: 992px) {
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 700px;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        padding: 35px 30px;
+    }
 }
 
+
+/* ==================================================
+   PROJECTS - MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .project-grid {
+        width: 100%;
+
+        max-width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        padding: 30px 25px;
+
+        border-radius: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 22px;
+    }
+
+    .project-card p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .project-icon {
+        font-size: 50px;
+    }
+
+    .project-card .btn {
+        width: 200px;
+
+        min-width: 200px;
+    }
+}
+
+
+/* ==================================================
+   PROJECTS - SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .project-grid {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        padding: 28px 18px;
+
+        border-radius: 16px;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+
+        margin-bottom: 12px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .project-icon {
+        font-size: 45px;
+
+        margin-bottom: 15px;
+    }
+
+    .project-card .btn {
+        width: 200px;
+
+        min-width: 200px;
+
+        margin-top: 20px;
+    }
+}
 
 /* ==================================================
    EDUCATION
@@ -841,7 +943,7 @@ section {
 
     align-items: center;
 
-    gap: 8px;
+    gap: 10px;
 }
 
 .contact-box i {
@@ -865,9 +967,6 @@ section {
 .contact-box a:hover {
     color: var(--secondary);
 }
-
-
-/* CONTACT ITEMS */
 
 .contact-item {
     display: flex;
@@ -936,11 +1035,6 @@ footer {
 #topBtn:hover {
     transform: scale(1.1);
 }
-
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
 
 
 /* ==================================================
@@ -1013,10 +1107,16 @@ footer {
     }
 
 
-    /* PROJECTS */
+    /* ==============================================
+       PROJECTS - TABLET
+       2 PROJECTS SIDE BY SIDE
+    ============================================== */
 
     .project-grid {
-        /* Tablet = 2 projects */
+        width: 100%;
+
+        max-width: 900px;
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
 
         gap: 25px;
@@ -1024,6 +1124,20 @@ footer {
 
     .project-card {
         min-height: 350px;
+
+        padding: 30px 22px;
+    }
+
+    .project-card h3 {
+        font-size: 21px;
+    }
+
+    .project-card p {
+        font-size: 15px;
+    }
+
+    .project-card .btn {
+        min-width: 180px;
     }
 }
 
@@ -1073,7 +1187,9 @@ footer {
     }
 
 
-    /* HERO */
+    /* ==============================================
+       HERO
+    ============================================== */
 
     .hero {
         width: 100%;
@@ -1148,7 +1264,9 @@ footer {
     }
 
 
-    /* SECTIONS */
+    /* ==============================================
+       SECTIONS
+    ============================================== */
 
     section {
         width: 100%;
@@ -1157,7 +1275,65 @@ footer {
     }
 
 
-    /* TIMELINE */
+    /* ==============================================
+       PROJECTS - MOBILE
+       1 PROJECT PER ROW
+    ============================================== */
+
+    .project-grid {
+        width: 100%;
+
+        max-width: 600px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        min-height: 350px;
+
+        padding: 30px 25px;
+
+        border-radius: 18px;
+    }
+
+    .project-card h3 {
+        font-size: 22px;
+
+        margin-bottom: 12px;
+    }
+
+    .project-card p {
+        max-width: 500px;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .project-icon {
+        font-size: 50px;
+
+        margin-bottom: 18px;
+    }
+
+    .project-card .btn {
+        width: 200px;
+
+        min-width: 200px;
+
+        margin-top: 25px;
+    }
+
+
+    /* ==============================================
+       TIMELINE
+    ============================================== */
 
     .timeline::before,
     .timeline-item::before {
@@ -1169,25 +1345,9 @@ footer {
     }
 
 
-    /* PROJECTS */
-
-    .project-grid {
-        /* Mobile = 1 project */
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-    .project-card {
-        width: 100%;
-
-        min-height: 340px;
-
-        padding: 30px 25px;
-    }
-
-
-    /* CONTACT */
+    /* ==============================================
+       CONTACT
+    ============================================== */
 
     .contact-box {
         width: 100%;
@@ -1233,7 +1393,9 @@ footer {
     }
 
 
-    /* HERO */
+    /* ==============================================
+       HERO
+    ============================================== */
 
     .hero {
         padding: 90px 18px 50px;
@@ -1282,7 +1444,9 @@ footer {
     }
 
 
-    /* BUTTONS */
+    /* ==============================================
+       BUTTONS
+    ============================================== */
 
     .buttons {
         width: 100%;
@@ -1313,7 +1477,9 @@ footer {
     }
 
 
-    /* HERO CIRCLE */
+    /* ==============================================
+       HERO CIRCLE
+    ============================================== */
 
     .circle {
         width: 210px;
@@ -1325,7 +1491,9 @@ footer {
     }
 
 
-    /* SECTIONS */
+    /* ==============================================
+       SECTIONS
+    ============================================== */
 
     section {
         width: 100%;
@@ -1340,38 +1508,62 @@ footer {
     }
 
 
-    /* PROJECTS */
+    /* ==============================================
+       PROJECTS
+    ============================================== */
 
     .project-grid {
+        width: 100%;
+
+        max-width: 100%;
+
         grid-template-columns: 1fr;
 
         gap: 20px;
     }
 
     .project-card {
-        padding: 30px 20px;
+        width: 100%;
 
         min-height: 330px;
-    }
 
-    .project-icon {
-        font-size: 50px;
+        padding: 28px 18px;
+
+        border-radius: 16px;
     }
 
     .project-card h3 {
-        font-size: 21px;
+        font-size: 20px;
+
+        margin-bottom: 12px;
     }
 
     .project-card p {
-        font-size: 15px;
+        width: 100%;
+
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+    .project-icon {
+        font-size: 45px;
+
+        margin-bottom: 15px;
     }
 
     .project-card .btn {
-        width: 180px;
+        width: 200px;
+
+        min-width: 200px;
+
+        margin-top: 20px;
     }
 
 
-    /* CONTACT */
+    /* ==============================================
+       CONTACT
+    ============================================== */
 
     .contact-box {
         width: 100%;
@@ -1404,10 +1596,11 @@ footer {
     }
 
 
-    /* CARDS */
+    /* ==============================================
+       CARDS
+    ============================================== */
 
     .card,
-    .project-card,
     .timeline-item,
     .education-card {
         padding: 25px 20px;
@@ -1447,3 +1640,31 @@ footer {
 
     color: #fff;
 }
+
+/* ==================================================
+   FINAL PROJECT LAYOUT FIX
+================================================== */
+
+/* DESKTOP - 2 PROJECTS PER ROW */
+@media (min-width: 993px) {
+
+    .project-grid {
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+        max-width: 1200px !important;
+
+        margin: 0 auto !important;
+
+        gap: 30px !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+}
+
