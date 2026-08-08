@@ -1677,7 +1677,7 @@ footer {
     .project-card .btn {
         display: flex;
         width: fit-content;
-        margin: 0 auto;
+        margin: 15px 0 auto;
     }
 
 }
