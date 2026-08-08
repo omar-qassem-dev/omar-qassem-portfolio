@@ -1340,3 +1340,17 @@ footer {
     width: 220px !important;
     text-align: center !important;
 }
+
+.contact-item {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.contact-item i {
+flex-shrink: 0;
+}
+
+.contact-item a {
+display: inline-block;
+}
