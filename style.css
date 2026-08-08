@@ -304,6 +304,8 @@ body.light header {
 
     padding: 14px 34px;
 
+    min-height: 50px;
+
     border-radius: 40px;
 
     background: var(--primary);
@@ -673,37 +675,50 @@ section {
 .project-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Desktop = 3 projects */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
 }
 
 .project-card {
     background: var(--card);
 
-    padding: 35px;
+    padding: 35px 30px;
 
-    border-radius: 18px;
+    border-radius: 20px;
+
+    min-height: 360px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
     text-align: center;
 
-    transition: .4s;
+    border: 1px solid transparent;
 
-    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .08);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease,
+        border-color .4s ease,
+        background .4s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-12px);
+    transform: translateY(-10px);
 
-    background: var(--primary);
-}
+    border-color: var(--secondary);
 
-.project-card:hover h3,
-.project-card:hover p,
-.project-card:hover i {
-    color: #fff;
+    box-shadow: var(--shadow);
 }
 
 .project-icon {
@@ -711,13 +726,17 @@ section {
 
     color: var(--secondary);
 
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 
     transition: .4s;
 }
 
+.project-card:hover .project-icon {
+    transform: scale(1.1);
+}
+
 .project-card h3 {
-    font-size: 24px;
+    font-size: 23px;
 
     margin-bottom: 15px;
 
@@ -728,6 +747,27 @@ section {
     color: var(--text-secondary);
 
     line-height: 1.8;
+
+    max-width: 330px;
+
+    flex: 1;
+}
+
+
+/* PROJECT BUTTON */
+
+.project-card .btn {
+    width: 180px;
+
+    min-height: 48px;
+
+    margin-top: 25px;
+
+    display: inline-flex;
+}
+
+.project-card .btn:hover {
+    transform: translateY(-4px);
 }
 
 
@@ -827,6 +867,25 @@ section {
 }
 
 
+/* CONTACT ITEMS */
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.contact-item i {
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    display: inline-block;
+}
+
+
 /* ==================================================
    FOOTER
 ================================================== */
@@ -884,9 +943,9 @@ footer {
 ================================================== */
 
 
-/* =========================
+/* ==================================================
    TABLET
-========================= */
+================================================== */
 
 @media (max-width: 992px) {
 
@@ -952,12 +1011,26 @@ footer {
     .circle i {
         font-size: 90px;
     }
+
+
+    /* PROJECTS */
+
+    .project-grid {
+        /* Tablet = 2 projects */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+    }
+
+    .project-card {
+        min-height: 350px;
+    }
 }
 
 
-/* =========================
+/* ==================================================
    MOBILE
-========================= */
+================================================== */
 
 @media (max-width: 768px) {
 
@@ -1096,6 +1169,24 @@ footer {
     }
 
 
+    /* PROJECTS */
+
+    .project-grid {
+        /* Mobile = 1 project */
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+
+        min-height: 340px;
+
+        padding: 30px 25px;
+    }
+
+
     /* CONTACT */
 
     .contact-box {
@@ -1114,9 +1205,9 @@ footer {
 }
 
 
-/* =========================
+/* ==================================================
    SMALL MOBILE
-========================= */
+================================================== */
 
 @media (max-width: 480px) {
 
@@ -1249,6 +1340,37 @@ footer {
     }
 
 
+    /* PROJECTS */
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 30px 20px;
+
+        min-height: 330px;
+    }
+
+    .project-icon {
+        font-size: 50px;
+    }
+
+    .project-card h3 {
+        font-size: 21px;
+    }
+
+    .project-card p {
+        font-size: 15px;
+    }
+
+    .project-card .btn {
+        width: 180px;
+    }
+
+
     /* CONTACT */
 
     .contact-box {
@@ -1324,38 +1446,4 @@ footer {
     background: var(--secondary);
 
     color: #fff;
-}
-
-.buttons {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.btn {
-    width: 220px !important;
-    text-align: center !important;
-}
-
-.contact-item {
-display: flex;
-align-items: center;
-gap: 10px;
-}
-
-.contact-item i {
-flex-shrink: 0;
-}
-
-.contact-item a {
-display: inline-block;
-}
-
-.project-card .btn {
-    display: inline-flex;
-    margin-top: 20px;
 }
