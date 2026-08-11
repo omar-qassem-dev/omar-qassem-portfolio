@@ -1,11 +1,12 @@
 /* ==================================================
-GOOGLE FONT
+   GOOGLE FONT
 ================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+
 /* ==================================================
-RESET
+   RESET
 ================================================== */
 
 * {
@@ -25,8 +26,9 @@ body {
     transition: .4s;
 }
 
+
 /* ==================================================
-COLORS
+   COLORS
 ================================================== */
 
 :root {
@@ -77,8 +79,9 @@ img {
     max-width: 100%;
 }
 
+
 /* ==================================================
-NAVBAR
+   NAVBAR
 ================================================== */
 
 header {
@@ -128,10 +131,6 @@ body.light header {
 }
 
 .nav-links {
-    max-height: calc(100vh - 80px);
-
-    overflow-y: auto;
-
     display: flex;
     gap: 30px;
 }
@@ -169,8 +168,9 @@ body.light header {
     width: 100%;
 }
 
+
 /* ==================================================
-THEME BUTTON
+   THEME BUTTON
 ================================================== */
 
 .theme-toggle {
@@ -195,8 +195,9 @@ THEME BUTTON
     transform: rotate(180deg);
 }
 
+
 /* ==================================================
-MENU BUTTON
+   MENU BUTTON
 ================================================== */
 
 .menu-btn {
@@ -209,8 +210,9 @@ MENU BUTTON
     color: var(--text);
 }
 
+
 /* ==================================================
-HERO
+   HERO
 ================================================== */
 
 .hero {
@@ -273,8 +275,9 @@ HERO
     font-size: 17px;
 }
 
+
 /* ==================================================
-BUTTONS
+   BUTTONS
 ================================================== */
 
 .buttons {
@@ -336,8 +339,9 @@ BUTTONS
     min-width: 150px;
 }
 
+
 /* ==================================================
-HERO IMAGE
+   HERO IMAGE
 ================================================== */
 
 .hero-image {
@@ -374,8 +378,9 @@ HERO IMAGE
     color: #fff;
 }
 
+
 /* ==================================================
-ANIMATIONS
+   ANIMATIONS
 ================================================== */
 
 @keyframes float {
@@ -419,8 +424,9 @@ ANIMATIONS
     }
 }
 
+
 /* ==================================================
-SECTION
+   SECTION
 ================================================== */
 
 section {
@@ -455,8 +461,9 @@ section {
     background: var(--secondary);
 }
 
+
 /* ==================================================
-ABOUT
+   ABOUT
 ================================================== */
 
 .about-container {
@@ -475,8 +482,9 @@ ABOUT
     color: var(--text-secondary);
 }
 
+
 /* ==================================================
-SKILLS
+   SKILLS
 ================================================== */
 
 .skills-grid {
@@ -527,8 +535,9 @@ SKILLS
     color: var(--text);
 }
 
+
 /* ==================================================
-EXPERIENCE
+   EXPERIENCE
 ================================================== */
 
 .timeline {
@@ -617,8 +626,9 @@ EXPERIENCE
     color: var(--text-secondary);
 }
 
+
 /* ==================================================
-SCROLL REVEAL
+   SCROLL REVEAL
 ================================================== */
 
 .reveal {
@@ -657,8 +667,9 @@ SCROLL REVEAL
     transition-delay: .6s;
 }
 
+
 /* ==================================================
-PROJECTS
+   PROJECTS
 ================================================== */
 
 .project-grid {
@@ -746,124 +757,9 @@ PROJECTS
     min-width: 200px;
 }
 
-/* ==================================================
-PROJECTS - TABLET
-================================================== */
-
-@media (max-width: 992px) {
-
-    .project-grid {
-        grid-template-columns: 1fr;
-
-        max-width: 700px;
-
-        gap: 25px;
-    }
-
-    .project-card {
-        padding: 35px 30px;
-    }
-
-}
 
 /* ==================================================
-PROJECTS - MOBILE
-================================================== */
-
-@media (max-width: 768px) {
-
-    .project-grid {
-        width: 100%;
-
-        max-width: 100%;
-
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-    .project-card {
-        width: 100%;
-
-        padding: 30px 25px;
-
-        border-radius: 18px;
-    }
-
-    .project-card h3 {
-        font-size: 22px;
-    }
-
-    .project-card p {
-        font-size: 15px;
-
-        line-height: 1.8;
-    }
-
-    .project-icon {
-        font-size: 50px;
-    }
-
-    .project-card .btn {
-        width: 200px;
-
-        min-width: 200px;
-    }
-
-}
-
-/* ==================================================
-PROJECTS - SMALL MOBILE
-================================================== */
-
-@media (max-width: 480px) {
-
-    .project-grid {
-        width: 100%;
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-    }
-
-    .project-card {
-        width: 100%;
-
-        padding: 28px 18px;
-
-        border-radius: 16px;
-    }
-
-    .project-card h3 {
-        font-size: 20px;
-
-        margin-bottom: 12px;
-    }
-
-    .project-card p {
-        font-size: 14px;
-
-        line-height: 1.8;
-    }
-
-    .project-icon {
-        font-size: 45px;
-
-        margin-bottom: 15px;
-    }
-
-    .project-card .btn {
-        width: 200px;
-
-        min-width: 200px;
-
-        margin-top: 20px;
-    }
-
-}
-
-/* ==================================================
-EDUCATION
+   EDUCATION
 ================================================== */
 
 .education-card {
@@ -906,74 +802,81 @@ EDUCATION
     margin: 25px 0;
 }
 
+
 /* ==================================================
-CONTACT
+   CONTACT
 ================================================== */
 
-.contact-box {
-    max-width: 750px;
+.contact-final {
+    width: 100%;
 
-    margin: auto;
+    max-width: 520px;
 
-    padding: 40px;
+    margin: 0 auto;
+
+    padding: 24px 28px;
 
     background: var(--card);
 
     border-radius: 18px;
+
+    text-align: center;
 }
 
-.contact-box p {
-    margin: 20px 0;
+.contact-final p {
+    width: 100%;
 
-    font-size: 18px;
+    max-width: 310px;
 
-    display: flex;
+    margin: 7px auto;
+
+    display: grid;
+
+    grid-template-columns: auto auto;
 
     align-items: center;
 
-    gap: 10px;
+    justify-content: center;
+
+    column-gap: 7px;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    text-align: left;
 }
 
-.contact-box i {
-    flex: 0 0 30px;
-
-    width: 30px;
+.contact-final p i {
+    width: auto;
 
     color: var(--secondary);
 
     text-align: center;
 }
 
-.contact-box a {
+.contact-final p span,
+.contact-final p a {
     color: var(--text);
+
+    text-align: center;
 
     word-break: break-word;
 
+    overflow-wrap: anywhere;
+}
+
+.contact-final p a {
     transition: .3s;
 }
 
-.contact-box a:hover {
+.contact-final p a:hover {
     color: var(--secondary);
 }
 
-.contact-item {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
-}
-
-.contact-item i {
-    flex-shrink: 0;
-}
-
-.contact-item a {
-    display: inline-block;
-}
 
 /* ==================================================
-FOOTER
+   FOOTER
 ================================================== */
 
 footer {
@@ -988,8 +891,9 @@ footer {
     color: var(--text-muted);
 }
 
+
 /* ==================================================
-BACK TO TOP
+   BACK TO TOP
 ================================================== */
 
 #topBtn {
@@ -1022,8 +926,9 @@ BACK TO TOP
     transform: scale(1.1);
 }
 
+
 /* ==================================================
-TABLET
+   TABLET
 ================================================== */
 
 @media (max-width: 992px) {
@@ -1091,11 +996,6 @@ TABLET
         font-size: 90px;
     }
 
-    /* ==============================================
-       PROJECTS - TABLET
-       2 PROJECTS SIDE BY SIDE
-    ============================================== */
-
     .project-grid {
         width: 100%;
 
@@ -1123,11 +1023,11 @@ TABLET
     .project-card .btn {
         min-width: 180px;
     }
-
 }
 
+
 /* ==================================================
-MOBILE
+   MOBILE
 ================================================== */
 
 @media (max-width: 768px) {
@@ -1170,9 +1070,8 @@ MOBILE
         margin: 15px 0;
     }
 
-    /* ==============================================
-       HERO
-    ============================================== */
+
+    /* ---------- HERO ---------- */
 
     .hero {
         width: 100%;
@@ -1246,9 +1145,8 @@ MOBILE
         align-items: center;
     }
 
-    /* ==============================================
-       SECTIONS
-    ============================================== */
+
+    /* ---------- SECTIONS ---------- */
 
     section {
         width: 100%;
@@ -1256,10 +1154,8 @@ MOBILE
         padding: 80px 25px;
     }
 
-    /* ==============================================
-       PROJECTS - MOBILE
-       1 PROJECT PER ROW
-    ============================================== */
+
+    /* ---------- PROJECTS ---------- */
 
     .project-grid {
         width: 100%;
@@ -1308,12 +1204,17 @@ MOBILE
 
         min-width: 200px;
 
-        margin-top: 25px;
+        margin: 25px auto 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
     }
 
-    /* ==============================================
-       TIMELINE
-    ============================================== */
+
+    /* ---------- TIMELINE ---------- */
 
     .timeline::before,
     .timeline-item::before {
@@ -1324,28 +1225,86 @@ MOBILE
         margin-left: 0;
     }
 
-    /* ==============================================
-       CONTACT
-    ============================================== */
 
-    .contact-box {
+    /* ---------- CONTACT ---------- */
+
+    .contact-final {
         width: 100%;
 
-        padding: 30px 20px;
+        max-width: 380px;
+
+        padding: 22px 18px;
     }
 
-    .contact-box p {
-        width: 100%;
+    .contact-final p {
+        max-width: 300px;
+
+        grid-template-columns: auto auto;
+
+        justify-content: center;
+
+        column-gap: 6px;
+
+        margin: 7px auto;
 
         font-size: 16px;
-
-        line-height: 1.7;
     }
+
+    .contact-final p i {
+        width: auto;
+    }
+
+    /* ==================================================
+   FOOTER - MOBILE
+================================================== */
+
+footer {
+    margin-top: 60px;
+
+    padding: 20px 15px;
+
+    text-align: center;
+
+    width: 100%;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+footer p {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    text-align: center;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+}
+
+footer {
+    width: 100%;
+    padding: 25px 18px;
+    text-align: center;
+}
+
+footer p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+}
 
 }
 
+
 /* ==================================================
-SMALL MOBILE
+   SMALL MOBILE
 ================================================== */
 
 @media (max-width: 480px) {
@@ -1371,9 +1330,8 @@ SMALL MOBILE
         font-size: 24px;
     }
 
-    /* ==============================================
-       HERO
-    ============================================== */
+
+    /* ---------- HERO ---------- */
 
     .hero {
         padding: 90px 18px 50px;
@@ -1421,9 +1379,8 @@ SMALL MOBILE
         line-height: 1.7;
     }
 
-    /* ==============================================
-       BUTTONS
-    ============================================== */
+
+    /* ---------- BUTTONS ---------- */
 
     .buttons {
         width: 100%;
@@ -1453,9 +1410,8 @@ SMALL MOBILE
         text-align: center;
     }
 
-    /* ==============================================
-       HERO CIRCLE
-    ============================================== */
+
+    /* ---------- HERO CIRCLE ---------- */
 
     .circle {
         width: 210px;
@@ -1466,9 +1422,8 @@ SMALL MOBILE
         font-size: 70px;
     }
 
-    /* ==============================================
-       SECTIONS
-    ============================================== */
+
+    /* ---------- SECTIONS ---------- */
 
     section {
         width: 100%;
@@ -1482,9 +1437,8 @@ SMALL MOBILE
         margin-bottom: 50px;
     }
 
-    /* ==============================================
-       PROJECTS
-    ============================================== */
+
+    /* ---------- PROJECTS ---------- */
 
     .project-grid {
         width: 100%;
@@ -1526,10 +1480,6 @@ SMALL MOBILE
         margin-bottom: 15px;
     }
 
-    /* ==================================================
-       PROJECT BUTTONS - MOBILE CENTER FIX
-    ================================================== */
-
     .project-card .btn {
         width: 200px;
 
@@ -1544,54 +1494,50 @@ SMALL MOBILE
         justify-content: center;
     }
 
-    /* ==============================================
-       CONTACT
-    ============================================== */
 
-    .contact-box {
+    /* ---------- CONTACT ---------- */
+
+    .contact-final {
         width: 100%;
 
-        padding: 25px 18px;
+        max-width: 340px;
+
+        padding: 20px 14px;
+
+        border-radius: 15px;
     }
 
-    .contact-box p {
-        display: flex;
+    .contact-final p {
+        max-width: 270px;
 
-        align-items: flex-start;
+        grid-template-columns: auto auto;
 
-        gap: 8px;
+        justify-content: center;
+
+        column-gap: 5px;
+
+        margin: 6px auto;
 
         font-size: 15px;
     }
 
-    .contact-box i {
-        flex: 0 0 30px;
-
-        width: 30px;
-
-        margin-top: 4px;
+    .contact-final p i {
+        width: auto;
     }
 
-    .contact-box a {
-        min-width: 0;
 
-        overflow-wrap: anywhere;
-    }
-
-    /* ==============================================
-       CARDS
-    ============================================== */
+    /* ---------- CARDS ---------- */
 
     .card,
     .timeline-item,
     .education-card {
         padding: 25px 20px;
     }
-
 }
 
+
 /* ==================================================
-SCROLLBAR
+   SCROLLBAR
 ================================================== */
 
 ::-webkit-scrollbar {
@@ -1612,8 +1558,9 @@ SCROLLBAR
     background: var(--secondary);
 }
 
+
 /* ==================================================
-TEXT SELECTION
+   TEXT SELECTION
 ================================================== */
 
 ::selection {
