@@ -537,6 +537,34 @@ section {
 
 
 /* ==================================================
+   SKILLS - DESKTOP ONLY
+================================================== */
+
+@media (min-width: 993px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .skills-grid .card:nth-child(1),
+    .skills-grid .card:nth-child(2),
+    .skills-grid .card:nth-child(3),
+    .skills-grid .card:nth-child(4),
+    .skills-grid .card:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .skills-grid .card:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .skills-grid .card:nth-child(5) {
+        grid-column: 4 / span 2;
+    }
+}
+
+
+/* ==================================================
    EXPERIENCE
 ================================================== */
 
@@ -1254,51 +1282,52 @@ footer {
         width: auto;
     }
 
+
     /* ==================================================
-   FOOTER - MOBILE
-================================================== */
+       FOOTER - MOBILE
+    ================================================== */
 
-footer {
-    margin-top: 60px;
+    footer {
+        margin-top: 60px;
 
-    padding: 20px 15px;
+        padding: 20px 15px;
 
-    text-align: center;
+        text-align: center;
 
-    width: 100%;
+        width: 100%;
 
-    font-size: 14px;
+        font-size: 14px;
 
-    line-height: 1.6;
-}
+        line-height: 1.6;
+    }
 
-footer p {
-    width: 100%;
+    footer p {
+        width: 100%;
 
-    max-width: 100%;
+        max-width: 100%;
 
-    margin: 0;
+        margin: 0;
 
-    text-align: center;
+        text-align: center;
 
-    white-space: normal;
+        white-space: normal;
 
-    overflow-wrap: break-word;
-}
+        overflow-wrap: break-word;
+    }
 
-footer {
-    width: 100%;
-    padding: 25px 18px;
-    text-align: center;
-}
+    footer {
+        width: 100%;
+        padding: 25px 18px;
+        text-align: center;
+    }
 
-footer p {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 15px;
-    line-height: 1.6;
-}
+    footer p {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.6;
+    }
 
 }
 
