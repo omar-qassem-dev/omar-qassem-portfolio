@@ -1,20 +1,20 @@
-# Omar Qassem - Portfolio
+# 💻 Omar Qassem - Portfolio
 
-## About
+## 📖 About
 
 Personal portfolio website showcasing my skills , experience , education , and projects as a Front-End Developer .
 
-## Live Demo
+## 🌐 Live Demo
 
 [View Live Portfolio](https://omar-qassem-dev.github.io/omar-qassem-portfolio/)
 
-## Technologies
+## 🛠️ Technologies
 
 - HTML
 - CSS
 - JavaScript
 
-## Features
+## ✨ Features
 
 - Responsive design
 - Dark / Light mode
@@ -24,7 +24,7 @@ Personal portfolio website showcasing my skills , experience , education , and p
 - Projects showcase
 - Contact section
 
-## Sections
+## 📑 Sections
 
 - Home
 - About
@@ -34,7 +34,7 @@ Personal portfolio website showcasing my skills , experience , education , and p
 - Education
 - Contact
 
-## Author
+## 👨‍💻 Author
 
 **Omar Qassem**
 
